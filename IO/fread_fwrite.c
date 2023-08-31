@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    while((n = fread(buf, 20, BUFSIZE, fps)) > 0) {
-        fwrite(buf, 20, n, fpd);
+    while((n = fread(buf, 1, BUFSIZE, fps)) > 0) {
+        fwrite(buf, 1, n, fpd);
     }
 
     fclose(fpd);
