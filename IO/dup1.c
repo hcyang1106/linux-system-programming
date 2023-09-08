@@ -21,6 +21,8 @@ int main() {
     dup(fd);
     //
 
+    close(fd);
+
     puts("hello!");
     exit(0);
 }
