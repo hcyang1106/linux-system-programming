@@ -28,12 +28,13 @@ int main() {
                     }
                 }
                 if (mark) {
-                    printf("[%d]%d is a primer\n", i);
+                    printf("[%d]%d is a primer\n", n, i);
                 }
-
-                exit(0);
             }
+
+            exit(0);
         }
+
     }
 
     for (n = 0; n < N; n++) {
