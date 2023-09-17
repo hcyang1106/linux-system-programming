@@ -3,12 +3,14 @@
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 
 #define BUFSIZE 8
 
 int main(int argc, char *argv[]) {
     int sfd, dfd = 1;
     char buf[16];
+    memset(buf, 0, 16);
 
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <file_name>\n", argv[0]);
@@ -28,11 +30,13 @@ int main(int argc, char *argv[]) {
             break;
         }
 
+//        printf("buf = %s\n", buf);
+//        printf("len = %d\n", len);
+//        printf("\n");
+
         if (len == 0) {
             break;
         }
-
-        printf("len = %d\n", len);
 
         int pos = 0;
         while (len > 0) {
